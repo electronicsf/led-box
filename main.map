@@ -2,6 +2,13 @@ Archive member included because of file (symbol)
 
 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+i                   0x2               main.o
 
 Memory Configuration
 
@@ -113,7 +120,7 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0xae
+.text           0x00000000      0x4ec
  *(.vectors)
  .vectors       0x00000000       0x54 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -151,6 +158,8 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x00000060       0x10 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000060                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -161,42 +170,54 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000060        0x8 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .init9         0x00000070        0x8 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  *(.init9)
  *(.text)
- .text          0x00000068        0x4 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
-                0x00000068                __vector_1
-                0x00000068                __vector_12
-                0x00000068                __bad_interrupt
-                0x00000068                __vector_6
-                0x00000068                __vector_3
-                0x00000068                __vector_11
-                0x00000068                __vector_13
-                0x00000068                __vector_17
-                0x00000068                __vector_19
-                0x00000068                __vector_7
-                0x00000068                __vector_5
-                0x00000068                __vector_4
-                0x00000068                __vector_9
-                0x00000068                __vector_2
-                0x00000068                __vector_15
-                0x00000068                __vector_8
-                0x00000068                __vector_14
-                0x00000068                __vector_10
-                0x00000068                __vector_16
-                0x00000068                __vector_18
-                0x00000068                __vector_20
- .text          0x0000006c       0x3e main.o
-                0x0000006c                main
- .text          0x000000aa        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000000aa                . = ALIGN (0x2)
+ .text          0x00000078        0x4 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000078                __vector_1
+                0x00000078                __vector_12
+                0x00000078                __bad_interrupt
+                0x00000078                __vector_6
+                0x00000078                __vector_3
+                0x00000078                __vector_11
+                0x00000078                __vector_13
+                0x00000078                __vector_17
+                0x00000078                __vector_19
+                0x00000078                __vector_7
+                0x00000078                __vector_5
+                0x00000078                __vector_4
+                0x00000078                __vector_9
+                0x00000078                __vector_2
+                0x00000078                __vector_15
+                0x00000078                __vector_8
+                0x00000078                __vector_14
+                0x00000078                __vector_10
+                0x00000078                __vector_16
+                0x00000078                __vector_18
+                0x00000078                __vector_20
+ .text          0x0000007c      0x46c main.o
+                0x000002a8                side
+                0x0000020c                middle
+                0x0000012a                shift
+                0x00000374                end
+                0x000001d8                inout
+                0x000003b8                main
+                0x00000274                odd
+                0x0000016e                zoomout
+                0x00000240                even
+                0x0000007c                start
+                0x000000c0                zoomin
+ .text          0x000004e8        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x000004e8        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000004e8                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000000aa        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000000aa                . = ALIGN (0x2)
+ .text.libgcc   0x000004e8        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000004e8        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000004e8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000aa        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000000aa                exit
-                0x000000aa                _exit
+ .fini9         0x000004e8        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000004e8                exit
+                0x000004e8                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -215,16 +236,17 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000aa        0x4 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000004e8        0x4 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000ae                _etext = .
+                0x000004ec                _etext = .
 
-.data           0x00800060        0x0 load address 0x000000ae
+.data           0x00800060        0x0 load address 0x000004ec
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  .data          0x00800060        0x0 main.o
  .data          0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
@@ -233,24 +255,27 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800060                _edata = .
                 0x00800060                PROVIDE (__data_end, .)
 
-.bss            0x00800060        0x0
+.bss            0x00800060        0x2
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  .bss           0x00800060        0x0 main.o
  .bss           0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800060        0x0 g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  *(.bss*)
  *(COMMON)
-                0x00800060                PROVIDE (__bss_end, .)
-                0x000000ae                __data_load_start = LOADADDR (.data)
-                0x000000ae                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800060        0x2 main.o
+                0x00800060                i
+                0x00800062                PROVIDE (__bss_end, .)
+                0x000004ec                __data_load_start = LOADADDR (.data)
+                0x000004ec                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800060        0x0
-                0x00800060                PROVIDE (__noinit_start, .)
+.noinit         0x00800062        0x0
+                0x00800062                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800060                PROVIDE (__noinit_end, .)
-                0x00800060                _end = .
-                0x00800060                PROVIDE (__heap_start, .)
+                0x00800062                PROVIDE (__noinit_end, .)
+                0x00800062                _end = .
+                0x00800062                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -307,49 +332,53 @@ LOAD g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00000000       0x20 main.o
 
 .debug_pubnames
-                0x00000000       0x1b
+                0x00000000       0x83
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0x1b main.o
+                0x00000000       0x83 main.o
 
-.debug_info     0x00000000      0x1a2
+.debug_info     0x00000000      0x90e
  *(.debug_info)
- .debug_info    0x00000000      0x1a2 main.o
+ .debug_info    0x00000000      0x90e main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000       0xdc
+.debug_abbrev   0x00000000      0x13b
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xdc main.o
+ .debug_abbrev  0x00000000      0x13b main.o
 
-.debug_line     0x00000000      0x1bb
+.debug_line     0x00000000      0x8d3
  *(.debug_line)
- .debug_line    0x00000000      0x1bb main.o
+ .debug_line    0x00000000      0x8d3 main.o
 
-.debug_frame    0x00000000       0x20
+.debug_frame    0x00000000       0xc0
  *(.debug_frame)
- .debug_frame   0x00000000       0x20 main.o
+ .debug_frame   0x00000000       0xc0 main.o
 
-.debug_str      0x00000000       0xa8
+.debug_str      0x00000000       0xe0
  *(.debug_str)
- .debug_str     0x00000000       0xa8 main.o
-                                 0xdc (size before relaxing)
+ .debug_str     0x00000000       0xe0 main.o
+                                0x114 (size before relaxing)
 
-.debug_loc      0x00000000       0x48
+.debug_loc      0x00000000      0x3f0
  *(.debug_loc)
- .debug_loc     0x00000000       0x48 main.o
+ .debug_loc     0x00000000      0x3f0 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
 OUTPUT(main.elf elf32-avr)
 LOAD linker stubs
 
-.debug_ranges   0x00000000       0x48
- .debug_ranges  0x00000000       0x48 main.o
+.debug_ranges   0x00000000      0x1f8
+ .debug_ranges  0x00000000      0x1f8 main.o
 
 Cross Reference Table
 
 Symbol                                            File
 __bad_interrupt                                   g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__do_clear_bss                                    g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  main.o
 __heap_end                                        g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 __init                                            g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 __stack                                           g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -376,7 +405,18 @@ __vector_9                                        g:/program files/winavr-201001
 __vector_default                                  g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 __vectors                                         g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 _exit                                             g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+end                                               main.o
+even                                              main.o
 exit                                              g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                                                   g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+i                                                 main.o
+inout                                             main.o
 main                                              main.o
                                                   g:/program files/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+middle                                            main.o
+odd                                               main.o
+shift                                             main.o
+side                                              main.o
+start                                             main.o
+zoomin                                            main.o
+zoomout                                           main.o
